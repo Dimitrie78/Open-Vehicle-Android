@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Open Vehicle</string>
+    <string name="app_name">SmartED</string>
     <string name="Loading">Bitte warten</string>
     <string name="Settings">Einstellungen</string>
     <string name="Range" formatted="false">Reichweite: %s (%s geschätzt)</string>

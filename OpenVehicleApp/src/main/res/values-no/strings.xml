@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Open Vehicle</string>
+    <string name="app_name">SmartED</string>
     <string name="Loading">Vennligst vent</string>
     <string name="Settings">Innstillinger</string>
     <string name="Range" formatted="false">Rekkevidde: %s (%s estimert)</string>
