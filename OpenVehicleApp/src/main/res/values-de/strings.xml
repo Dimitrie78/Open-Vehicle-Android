@@ -124,6 +124,13 @@
     <string name="lb_ft_rt_capacity">#%d: Akku-Kapazitätsmessung (CAP%%)</string>
     <string name="lb_ft_rt_capacity_nom_ah">#%d: Akku-Standardkapazität (Ah)</string>
 
+    <string name="lb_ft_se_doreboot">#%d: Starte Module neu wenn keine Verbindung</string>
+    <string name="lb_ft_se_reboot_time">#%d: Starte Netzwerk neu wenn keine Verbindung [min]</string>
+    <string name="lb_ft_se_preclimaoffset">#%d: PreClima offset [min]</string>
+    <string name="lb_ft_se_ignition_time">#%d: Zündung aus timer [min]</string>
+    <string name="lb_ft_se_autosetrecu">#%d: Setze Recu automatisch zu D+</string>
+    <string name="lb_ft_se_resettrip">#%d: Reset Trip beim Laden</string>
+
     <string name="lb_cp_registered_telephone">#%d: Registrierte Telefonnummer</string>
     <string name="lb_cp_module_password">#%d: Module-Passwort</string>
     <string name="lb_cp_miles_km">#%d: Meilen/Km</string>

@@ -202,6 +202,14 @@ public class FeaturesFragment extends BaseFragment implements OnResultCommandLis
 		private static final int FEATURE_CAPACITY 				= 0x0D; // Battery capacity average (SOH%)
 		private static final int FEATURE_CAPACITY_NOM_AH		= 0x10; // Battery nominal capacity (Ah)
 
+		// SmartED3:
+		private static final int FEATURE_DOREBOOT			= 0x00; // Reboot Module if no Network
+		private static final int FEATURE_RESTART_TIME		= 0x01; // Restart Network after time if no Network [min]
+		private static final int FEATURE_PRECLIMA_OFFSET	= 0x02; // PreClima offset [min]
+		private static final int IGNITION_TIME				= 0x03; // Ignition timout [min]
+		private static final int FEATURE_AUTO_SETRECU		= 0x04; // Auto set Recu up when ENV on
+		private static final int FEATURE_TRIP_RESET			= 0x05; // Reset Trip when charge
+
 		// The FEATURE_CARBITS feature is a set of ON/OFF bits to control different
 		// miscelaneous aspects of the system. The following bits are defined:
 		//private static final int FEATURE_CB_2008		= 0x01; // Set to 1 to mark the car as 2008/2009
@@ -262,6 +270,33 @@ public class FeaturesFragment extends BaseFragment implements OnResultCommandLis
 						return context.getString(R.string.lb_ft_rt_capacity, position);
 					case FEATURE_CAPACITY_NOM_AH:
 						return context.getString(R.string.lb_ft_rt_capacity_nom_ah, position);
+
+					default:
+						// fall through to standard
+				}
+			}
+
+			// SmartED3:
+			if (mCarData.car_type.equals("SE")) {
+				switch (position) {
+					case FEATURE_DOREBOOT:
+						return context.getString(R.string.lb_ft_se_doreboot, position);
+					case FEATURE_RESTART_TIME:
+						return context.getString(R.string.lb_ft_se_reboot_time, position);
+					case FEATURE_PRECLIMA_OFFSET:
+						return context.getString(R.string.lb_ft_se_preclimaoffset, position);
+					case IGNITION_TIME:
+						return context.getString(R.string.lb_ft_se_ignition_time, position);
+					case FEATURE_AUTO_SETRECU:
+						return context.getString(R.string.lb_ft_se_autosetrecu, position);
+					case FEATURE_TRIP_RESET:
+						return context.getString(R.string.lb_ft_se_resettrip, position);
+					case FEATURE_SUFFSOC:
+						return context.getString(R.string.lb_ft_rt_suffsoc, position);
+					case FEATURE_SUFFRANGE:
+						return context.getString(R.string.lb_ft_rt_suffrange, position);
+					case FEATURE_MAXRANGE:
+						return context.getString(R.string.lb_ft_rt_maxrange, position);
 
 					default:
 						// fall through to standard

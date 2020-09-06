@@ -655,7 +655,7 @@ public class CarFragment extends BaseFragment implements OnClickListener, OnResu
 		TextView pemtvl = (TextView) findViewById(R.id.tabCarTextPEMLabel);
 		TextView pemtv = (TextView) findViewById(R.id.tabCarTextPEM);
 		// Quick workaround for display of cabin temperature
-		if (pCarData.car_type.equals("VWUP") || pCarData.car_type.equals("VWUP.T26")) {
+		if (pCarData.car_type.equals("VWUP") || pCarData.car_type.equals("VWUP.T26") || pCarData.car_type.equals("SE")) {
 		    pemtvl.setText(R.string.textCAB);
 		} else {
 		    pemtvl.setText(R.string.textPEM);
@@ -663,7 +663,11 @@ public class CarFragment extends BaseFragment implements OnClickListener, OnResu
 		if (pCarData.stale_car_temps == DataStale.NoValue) {
 			pemtv.setText("");
 		} else {
-			pemtv.setText(pCarData.car_temp_pem);
+			if (pCarData.car_type.equals("VWUP") || pCarData.car_type.equals("SE")) {
+				pemtv.setText(pCarData.car_temp_cabin);
+			} else {
+				pemtv.setText(pCarData.car_temp_pem);
+			}
 			if (pCarData.stale_car_temps == DataStale.Stale) {
 				pemtv.setTextColor(0xFF808080);
 			} else {
