@@ -131,6 +131,13 @@
     <string name="lb_ft_rt_capacity">#%d: Battery measured capacity (CAP%%)</string>
     <string name="lb_ft_rt_capacity_nom_ah">#%d: Battery nominal capacity (Ah)</string>
 
+    <string name="lb_ft_se_doreboot">#%d: Reboot Module if no Network</string>
+    <string name="lb_ft_se_reboot_time">#%d: Restart Network when no Connection [min]</string>
+    <string name="lb_ft_se_preclimaoffset">#%d: PreClima offset [min]</string>
+    <string name="lb_ft_se_ignition_time">#%d: Ignition off timer [min]</string>
+    <string name="lb_ft_se_autosetrecu">#%d: Auto set Recu up</string>
+    <string name="lb_ft_se_resettrip">#%d: Reset Trip when charge</string>
+
     <string name="lb_cp_registered_telephone">#%d: Registered Telephone</string>
     <string name="lb_cp_module_password">#%d: Module Password</string>
     <string name="lb_cp_miles_km">#%d: Miles/Km</string>
